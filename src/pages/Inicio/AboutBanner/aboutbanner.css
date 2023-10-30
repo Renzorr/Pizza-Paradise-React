@@ -1,0 +1,26 @@
+.about-banner {
+  background-image: url("/src/assets/inicio/about-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  padding: 70px 20px;
+  margin-bottom: var(--space);
+}
+
+.about-banner h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.about-banner p {
+  width: 100%;
+  font-size: 18px;
+  max-width: 400px;
+  margin-block: 30px;
+}

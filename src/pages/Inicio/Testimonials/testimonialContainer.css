@@ -1,0 +1,25 @@
+.testimonials {
+  color: var(--gray);
+  margin-bottom: var(--space);
+}
+
+.testimonials h2 {
+  font-family: "Apollonia";
+  font-size: clamp(58px, 10cqw, 80px);
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 650px));
+  justify-content: space-between;
+  gap: 50px;
+}
+
+@media (width < 1380px) {
+  .testimonial-grid {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+}

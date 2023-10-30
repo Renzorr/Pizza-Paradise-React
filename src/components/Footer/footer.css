@@ -1,0 +1,24 @@
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 30px 20px 80px;
+}
+
+.footer-links {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin-block: 40px 50px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}

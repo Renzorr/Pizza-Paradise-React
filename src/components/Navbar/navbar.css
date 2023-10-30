@@ -1,0 +1,100 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: var(--overlay);
+  z-index: 99;
+}
+
+.overlay.active {
+  left: 0;
+}
+
+.menu-responsive {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 85vw;
+  height: 100%;
+  background-color: var(--white);
+  padding: 40px 30px;
+  transition: 0.4s;
+}
+
+.menu-responsive.active {
+  left: 0;
+}
+
+.menu-responsive img {
+  margin-left: auto;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.menu-responsive ul li a {
+  display: block;
+  margin-bottom: 50px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  color: var(--gray);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-right .bag {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 13px;
+}
+
+.menu-bar {
+  display: none;
+}
+
+@media (width < 1085px) {
+  header nav,
+  .header-right .button {
+    display: none;
+  }
+
+  .menu-bar {
+    display: initial;
+  }
+
+  .menu-responsive {
+    display: flex;
+  }
+}

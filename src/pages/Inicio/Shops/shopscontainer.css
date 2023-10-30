@@ -1,0 +1,33 @@
+.shops {
+  font-family: "Apollonia";
+  margin-bottom: var(--space);
+}
+
+.shops h2 {
+  font-size: clamp(58px, 10cqw, 80px);
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 80px;
+}
+
+.shops h2 span {
+  color: var(--red);
+}
+
+.shop-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (width < 1229px) {
+  .shops h2 {
+    text-align: center;
+  }
+
+  .shop-container {
+    justify-content: center;
+    gap: 50px;
+  }
+}
