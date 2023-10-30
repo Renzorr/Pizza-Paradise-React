@@ -1,0 +1,50 @@
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed gainsboro;
+  border-radius: 20px;
+  padding: 20px 20px 40px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.menu-card:hover {
+  border: 2px dashed var(--red);
+}
+
+.menu-card:hover a {
+  color: var(--white);
+  background-color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.menu-card img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.menu-card p {
+  font-family: "Apollonia";
+  font-size: 32px;
+  color: var(--gray);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.menu-card span {
+  color: var(--red);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.menu-card a {
+  width: 100%;
+  text-align: center;
+  padding: 15px 10px;
+  color: var(--red);
+  border-radius: 30px;
+  border: 1px solid gainsboro;
+  transition: 0.3s;
+}

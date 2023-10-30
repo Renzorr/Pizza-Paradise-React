@@ -3,7 +3,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 80px;
+    margin-block: 80px;
     color: var(--gray);
   }
   
