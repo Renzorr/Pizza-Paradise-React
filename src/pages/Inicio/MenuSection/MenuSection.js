@@ -1,4 +1,4 @@
-import "./menu.css";
+import "./menusection.css";
 import MenuCard from "../../../components/MenuCard/MenuCard";
 import Pizza from "../../../assets/shared/pizza.jpg";
 
@@ -25,7 +25,7 @@ const PiZZASCARD = [
   },
 ];
 
-function Menu() {
+function MenuSection() {
   return (
     <section class="container menu">
       <div class="menu-top">
@@ -45,4 +45,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MenuSection;

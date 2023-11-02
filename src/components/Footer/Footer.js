@@ -1,11 +1,17 @@
-import "./footer.css"
+import { Link } from "react-router-dom";
+import "./footer.css";
 
 import Logo from "../../assets/shared/logo.png";
 import Facebook from "../../assets/shared/facebook.png";
 import Instagram from "../../assets/shared/instagram.png";
 import Twitter from "../../assets/shared/twitter.png";
 
-const LINKS = ["Inicio", "Nosotros", "Menu", "Tienda"];
+const LINKS = [
+  { name: "Inicio", path: "/" },
+  { name: "Nosotros", path: "Nosotros" },
+  { name: "Menu", path: "Menu" },
+  { name: "Tienda", path: "Tienda" },
+];
 
 const SOCIALS = [
   {
@@ -25,16 +31,16 @@ const SOCIALS = [
 function Footer() {
   return (
     <footer>
-      <img src={Logo} alt="Pizza Paradise Logo" width="120" height="120" />
+      <Link to="/">
+        <img src={Logo} alt="Pizza Paradise Logo" width="120" height="120" />
+      </Link>
 
       <ul class="footer-links">
-        {LINKS.map((link) => {
-          return (
-            <li>
-              <a href="#">{link}</a>
-            </li>
-          );
-        })}
+        {LINKS.map((link, index) => (
+          <li key={index}>
+            <Link to={link.path}>{link.name}</Link>
+          </li>
+        ))}
       </ul>
 
       <ul class="footer-socials">
@@ -42,12 +48,7 @@ function Footer() {
           return (
             <li>
               <a href="#">
-                <img
-                  src={social.src}
-                  alt={social.alt}
-                  width="21"
-                  height="21"
-                />
+                <img src={social.src} alt={social.alt} width="21" height="21" />
               </a>
             </li>
           );

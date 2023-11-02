@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import "./navbar.css";
@@ -7,7 +8,13 @@ import Bag from "../../assets/shared/bag.svg";
 import Menu from "../../assets/shared/menu.svg";
 import MenuClose from "../../assets/shared/menu-close.svg";
 
-const LINKS = ["Inicio", "Nosotros", "Menu", "Tienda"];
+
+const LINKS = [
+  { name: "Inicio", path: "/" },
+  { name: "Nosotros", path: "Nosotros" },
+  { name: "Menu", path: "Menu" },
+  { name: "Tienda", path: "Tienda" },
+];
 
 const NavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -23,24 +30,26 @@ const NavBar = () => {
   return (
     <>
       <header className="container">
-        <a href="#">
+        <Link to="/">
           <img src={Logo} alt="Pizza Paradise Logo" width="100" height="100" />
-        </a>
+        </Link>
         <nav>
           <ul>
             {LINKS.map((link, index) => (
               <li key={index}>
-                <a href="#">{link}</a>
+                <Link to={link.path}>{link.name}</Link>
               </li>
             ))}
           </ul>
         </nav>
         <div className="header-right">
-          <a href="#" className="bag">
+          <Link to="/Tienda" className="bag">
             <img src={Bag} alt="Shopping Bag" width="28" height="28" />
             <p className="counter">3</p>
+          </Link>
+          <a href="#" className="button">
+            Contacto
           </a>
-          <a href="#" className="button">Contacto</a>
           <button className="menu-bar" onClick={handleMenuClick}>
             <img src={Menu} alt="menu bar" width="30" height="30" id="menu" />
           </button>
@@ -61,11 +70,13 @@ const NavBar = () => {
             <ul>
               {LINKS.map((link, index) => (
                 <li key={index}>
-                  <a href="#">{link}</a>
+                  <Link to={link.path}>{link.name}</Link>
                 </li>
               ))}
             </ul>
-                <a href="#" className="button">Contacto</a>
+            <a href="#" className="button">
+              Contacto
+            </a>
           </div>
         </div>
       ) : (
@@ -82,11 +93,13 @@ const NavBar = () => {
             <ul>
               {LINKS.map((link, index) => (
                 <li key={index}>
-                  <a href="#">{link}</a>
+                  <Link to={link.path}>{link.name}</Link>
                 </li>
               ))}
             </ul>
-            <a href="#" className="button">Contacto</a>
+            <a href="#" className="button">
+              Contacto
+            </a>
           </div>
         </div>
       )}

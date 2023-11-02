@@ -5,6 +5,7 @@ footer {
   background-color: var(--gray);
   color: var(--white);
   padding: 30px 20px 80px;
+  margin-top: var(--space);
 }
 
 .footer-links {
